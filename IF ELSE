@@ -1,0 +1,53 @@
+1)  INPUT AND VARIABLES
+import java.util.Scanner;
+public class Main{
+    public static void main(String args[]){
+        Scanner obj=new Scanner(System.in);
+        int a=obj.nextInt();
+        float b=obj.nextFloat();
+        char ch=obj.next().charAt(0);
+        System.out.println(a+""+ch);
+        
+    }
+}
+-----------------------------------------------------------------------------------------------------
+2)FLOAT PRECISION
+import java.util.Scanner;
+public class Main{
+    public static void main(String args[]){
+        Scanner obj=new Scanner(System.in);
+        float a =obj.nextInt();
+        String formatted=String.format("%.2f",a);
+        System.out.println(formatted);
+    }
+}
+-----------------------------------------------------------------------------------------------------
+3)CALORIES CALCULATOR
+import java.util.Scanner;
+public class Main{
+    public static void main(String args[]){
+        Scanner obj=new Scanner(System.in);
+            int a=obj.nextInt();
+            char ch=obj.next().charAt(0);
+            double result=0;
+            if(ch=='I'){
+               result=a*2;
+            }
+            else if(ch=='M'){
+                result=a*1.5;
+            }
+            else if(ch=='D'){
+                result=a*1;
+            }
+            else{
+                System.out.println("Invalid");
+                return;
+            }
+            String formatted=String.format("%.2f",result);
+            
+            System.out.println(formatted+" CALORIES");
+        
+    }
+}
+------------------------------------------------------------------------------------------------------------
+4)
