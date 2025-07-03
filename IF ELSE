@@ -50,4 +50,58 @@ public class Main{
     }
 }
 ------------------------------------------------------------------------------------------------------------
-4)
+4) CHARACTER COMPARISON 
+
+import java.util.Scanner;
+public class Main{
+    public static void main(String args[]){
+        Scanner obj=new Scanner(System.in);
+        char ch1=obj.next().charAt(0);
+        char ch2=obj.next().charAt(0);
+        if(ch1>ch2){
+            System.out.print(ch1+" is greater than "+ch2);
+        }
+        else if(ch2>ch1){
+            System.out.print(ch1+" is smaller than "+ch2);
+        }
+        else{
+            System.out.print("both are equal");
+        }
+    }
+}
+
+----------------------------------------------------------------------------------------------------------------
+5) SIMPLE INTREST 
+
+import java.util.Scanner;
+public class Main{
+    public static void main(String args[]){
+        Scanner obj=new Scanner(System.in);
+        int p=obj.nextInt();
+        float r=obj.nextFloat();
+        int t=obj.nextInt();
+       float result=(p*t*r)/100;
+       String change=String.format("%.2f",result);
+        System.out.println(change);
+    }
+}
+
+-----------------------------------------------------------------------------------------------------------------
+6) COMPOUND INTREST 
+import java.util.Scanner;
+public class Main{
+    public static void main(String args[]){
+        Scanner obj=new Scanner(System.in);
+        int p=obj.nextInt();
+        float r=obj.nextFloat();
+        int t=obj.nextInt();
+        double compound=p*Math.pow((1+r/100),t);
+        double result=compound-p;
+        String change=String.format("%.2f",result);
+        System.out.print(change);
+        
+        
+    }
+}
+------------------------------------------------------------------------------------------------------------------
+
