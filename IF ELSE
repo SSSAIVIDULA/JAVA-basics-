@@ -49,6 +49,26 @@ public class Main{
         
     }
 }
+import java.util.Scanner;
+public class Main{
+    public static void main(String args[]){
+        Scanner obj=new Scanner(System.in);
+            int num=obj.nextInt();
+            char ch=obj.next().charAt(0);
+            if(ch=='I'){
+                System.out.println(num*2+" calories");
+            }
+            else if(ch=='M'){
+                String change=String.format("%.0f",num*1.5);
+                System.out.println(change+" calories");
+            }
+            else if(ch=='D'){
+                System.out.println(num*1+ " calories");
+        
+            }
+        
+    }
+}
 ------------------------------------------------------------------------------------------------------------
 4) CHARACTER COMPARISON 
 
@@ -491,13 +511,87 @@ public class Main{
         int em=obj.nextInt();
         int startmin=sh*60+sm;
         int endmin=eh*60+em;
-        int duration = endmin-startmin;
+        int duration=endmin-startmin;
         int hours=duration/60;
-        int min=duration%60;
-        System.out.println(hours+" hours and " +min +" minutes.");
+        int minutes=duration%60;
+        System.out.printf("%02d hours and %02d minutes",hours,minutes);
+    }
+}
+
+----------------------------------------------------------------------------------------------------------------------------
+24) SIMPLE AND COMPOUND INTREST 
+import java.util.Scanner;
+public class Main{
+    public static void main(String args[]){
+        Scanner obj=new Scanner(System.in);
+        float p=obj.nextFloat();
+        float r=obj.nextFloat();
+        float t=obj.nextFloat();
+        float simple=(p*t*r)/100;
+        double intrest=p*Math.pow(1+(r/100),t);
+        float compound=(float)intrest-p;
+        System.out.printf("%.2f\n",simple);
+        System.out.printf("%.2f",compound);
     }
 }
 ----------------------------------------------------------------------------------------------------------------------------
-24)
-
+25) SOUND 
+import java.util.Scanner;
+public class Main{
+    public static void main(String args[]){
+        Scanner obj=new Scanner(System.in);
+        int num=obj.nextInt();
+        if(num<=20){
+            System.out.println("Infrated");
+        }
+        else if(num>=20 && num<=20000){
+            System.out.println("Audible");
+        }
+        else {
+            System.out.println("ultra sound");
+        }
+    }
+}
+-------------------------------------------------------------------------------------------------------------------------------
+26) SALARY BONUS
+import java.util.Scanner;
+public class Main{
+    public static void main(String args[]){
+        Scanner obj=new Scanner(System.in);
+        int salary=obj.nextInt();
+        int ex=obj.nextInt();
+        float bonus=0;
+        if(ex>=10){
+            bonus=((20f/100)*salary)+salary;
+            System.out.println(bonus);
+        }
+        else if(ex>=5 && ex<=9){
+            bonus=((10f/100)*salary)+salary;
+        
+            System.out.println(bonus);
+        }
+        else if(ex<5){
+            bonus=((5f/100)*salary)+salary;
+            System.out.println(bonus);
+        }
+        
+    }
+}
+------------------------------------------------------------------------------------------------------------------------------
+27) LEAP YEAR
+import java.util.Scanner;
+public class Main{
+    public static void main(String args[]){
+        Scanner obj=new Scanner(System.in);
+        int year=obj.nextInt();
+        if((year%4==0 && year%100!=0 )|| year%400==0){
+            System.out.print("yes");
+        }
+        else{
+            System.out.println("no");
+        }
+    }
+}
+-----------------------------------------------------------------------------------------------------------------------------------
+28) 
 
