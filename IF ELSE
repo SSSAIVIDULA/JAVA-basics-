@@ -377,5 +377,127 @@ public class Main{
     }
 }
 ---------------------------------------------------------------------------------------------------------------
+19) HCF LCM
+import java.util.Scanner;
+public class Main{
+    public static void main(String args[]){
+        Scanner obj=new Scanner(System.in);
+        int a=obj.nextInt();
+        int b=obj.nextInt();
+        int hcf=1;
+        for(int i=1;i<=a && i<=b;i++){
+            if(a%i==0 && b%i==0){
+                hcf=i;
+            }
+        }
+        int lcm=(a*b)/hcf;
+        System.out.println(hcf+" "+lcm);
+    }
+}
+-------------------------------------------------------------------------------------------------------------------
+20)SALARY PREDICTION 
+import java.util.Scanner;
+public class Main{
+  public static void main(String args[]){
+      Scanner obj=new Scanner(System.in);
+      int basic =obj.nextInt();
+      char ch=obj.next().charAt(0);
+      if(ch=='a'){
+          float hra=(20f/100)*basic;
+          float da=(10f/100)*basic;
+          System.out.println(hra+da+basic);
+      }
+      if (ch=='b'){
+          float hra=(25f/100)*basic;
+          float da=(12f/100)*basic;
+          System.out.println(hra+da+basic);
+      }
+      if(ch=='c'){
+          float hra=(30f/100)*basic;
+          float da=(15f/100)*basic;
+          System.out.println(hra+da+basic);
+      }
+  }    
+
+}
+------------------------------------------------------------------------------------------------------------------
+21) ELECTRICITY BILL
+import java.util.Scanner;
+public class Main{
+    public static void main(String args[]){
+        Scanner obj=new Scanner(System.in);
+        int unit=obj.nextInt();
+        int total=0;
+        if(unit<=100){
+            total=unit*10;
+        }
+        else if(unit<=200){
+            total=(100*10)+((unit-100)*15);
+        }
+        else if (unit>200){
+            total=(100*10)+(100*15)+((unit-200)*20);
+        }
+        System.out.println(total);
+    }
+}
+
+
+import java.util.Scanner;
+public class Main{
+    public static void main(String args[]){
+        Scanner obj=new Scanner(System.in);
+        int unit=obj.nextInt();
+        int total=0;
+        if(unit<=100){
+            total=0;
+        }
+        else if(unit <=300){
+            total=((unit-100)*2);
+        }
+        else if(unit<=600){
+            total=(200*2)+((unit-300)*3);
+        }
+        else{
+            total=(200*2)+(300*3)+((unit-600)*5);
+        }
+        System.out.println(total);
+    }
+}
+--------------------------------------------------------------------------------------------------------------------
+22) PROFIT OR LOSS
+import java.util.Scanner;
+public class Main{
+    public static void main(String args[]){
+        Scanner obj=new Scanner(System.in);
+        float purchase =obj.nextFloat();
+        float market=obj.nextFloat();
+        if(market>purchase){
+            System.out.printf("%.0f profit",market-purchase);
+        }
+        else{
+            System.out.printf("%.0f loss",purchase - market);
+        }
+    }
+}
+--------------------------------------------------------------------------------------------------------------------
+23) TIME DURATION 
+import java.util.Scanner;
+public class Main{
+    public static void main(String args[]){
+        Scanner obj=new Scanner(System.in);
+        int sh=obj.nextInt();
+        int sm=obj.nextInt();
+        int eh=obj.nextInt();
+        int em=obj.nextInt();
+        int startmin=sh*60+sm;
+        int endmin=eh*60+em;
+        int duration = endmin-startmin;
+        int hours=duration/60;
+        int min=duration%60;
+        System.out.println(hours+" hours and " +min +" minutes.");
+    }
+}
+----------------------------------------------------------------------------------------------------------------------------
+24)
 
 
